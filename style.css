@@ -4,7 +4,7 @@ body {
 
 /* Menu lateral */
 .menu {
-  width: 220px;
+  width: 180px;
   height: 100vh;
   position: fixed;
   background-color: #f8f9fa;
@@ -12,8 +12,9 @@ body {
 }
 
 .menu a {
+  text-align: center;
   display: block;
-  padding: 12px;
+  padding: 44px;
   text-decoration: none;
   color: #333;
 }
@@ -31,7 +32,7 @@ body {
 
 /* Conteúdo principal */
 .conteudo {
-  margin-left: 220px;
+  margin-left: 180px;
   padding: 20px;
 }
 
