@@ -1,0 +1,53 @@
+body {
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  background-color: #f8f9fa;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar a:hover {
+  background-color: #e9ecef;
+}
+
+/* Conteúdo principal */
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+/* Banner */
+.banner {
+  height: 300px;
+  border: 2px solid #ccc;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rodapé */
+footer {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
