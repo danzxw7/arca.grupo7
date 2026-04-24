@@ -2,8 +2,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Sidebar */
-.sidebar {
+/* Menu lateral */
+.menu {
   width: 220px;
   height: 100vh;
   position: fixed;
@@ -11,19 +11,26 @@ body {
   border-right: 1px solid #ccc;
 }
 
-.sidebar a {
+.menu a {
   display: block;
   padding: 12px;
   text-decoration: none;
   color: #333;
 }
 
-.sidebar a:hover {
+.menu a:hover {
   background-color: #e9ecef;
 }
 
+/* Destacar a página atual */
+
+.menu a.active {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
 /* Conteúdo principal */
-.content {
+.conteudo {
   margin-left: 220px;
   padding: 20px;
 }
