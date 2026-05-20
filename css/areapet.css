@@ -1,0 +1,201 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONTAINER */
+.registro-pet-container{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TITULO */
+.registro-pet-container h1{
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    color: #1f1f2e;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+/* FOTO */
+.foto-pet{
+    width: clamp(120px, 18vw, 170px);
+    height: clamp(120px, 18vw, 170px);
+
+    border-radius: 50%;
+
+    background: #d9d9d9;
+
+    border: 2px solid #888;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.foto-pet:hover{
+    transform: scale(1.05);
+}
+
+.foto-pet span{
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* FORM */
+.form-pet{
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* INPUTS */
+.grupo-inputs{
+    width: 100%;
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 20px;
+}
+
+/* COLUNAS */
+.coluna{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+/* INPUTS E TEXTAREA */
+.coluna input,
+#infoAdicionais{
+    width: 100%;
+
+    border: 1px solid #999;
+
+    border-radius: 8px;
+
+    padding: 14px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: white;
+
+    transition: 0.3s ease;
+}
+
+/* FOCUS */
+.coluna input:focus,
+#infoAdicionais:focus{
+    border-color: #2d74da;
+
+    box-shadow: 0 0 6px rgba(45, 116, 218, 0.3);
+}
+
+/* TEXTAREA */
+#infoAdicionais{
+    min-height: 120px;
+
+    resize: vertical;
+
+    margin-bottom: 30px;
+}
+
+/* BOTÃO SOMENTE DESSA PAGINA */
+.btn-confirmar{
+    width: clamp(180px, 30vw, 260px);
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2d74da;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn-confirmar:hover{
+    background: #1f5bb0;
+
+    transform: translateY(-2px);
+}
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+/* TABLET */
+@media(max-width: 768px){
+
+    .registro-pet-container{
+        padding: 30px 15px;
+    }
+
+    .grupo-inputs{
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .form-pet{
+        width: 100%;
+    }
+
+}
+
+/* CELULAR */
+@media(max-width: 480px){
+
+    .registro-pet-container h1{
+        font-size: 2rem;
+    }
+
+    .foto-pet{
+        margin-bottom: 25px;
+    }
+
+    #infoAdicionais{
+        min-height: 100px;
+    }
+
+    .btn-confirmar{
+        width: 100%;
+    }
+
+}

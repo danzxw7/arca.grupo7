@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+.contato{
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 60px;
+    color: #1f2a44;
+    margin-bottom: 40px;
+}
+
+/* CAIXA */
+
+.caixa-contato{
+    width: 380px;
+    border: 2px solid #999;
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 50px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.item:last-child{
+    margin-bottom: 0;
+}
+
+.item i{
+    color: #1f2a44;
+}
+
+/* TEXTO */
+
+.mensagem{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* BOTÃO */
+
+#doar{
+    background-color: #2f6fe4;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 25px;
+}
+
+#doar:hover{
+    background-color: #1d56bb;
+}
+
+/* PIX */
+
+.pix{
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+/* QR CODE */
+
+.qrcode img{
+    width: 140px;
+    height: 140px;
+    border: 2px solid #888;
+    padding: 5px;
+    background-color: white;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 700px){
+
+    h1{
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .caixa-contato{
+        width: 100%;
+    }
+
+    .item{
+        font-size: 18px;
+    }
+
+    .mensagem,
+    .pix{
+        font-size: 17px;
+    }
+
+    #doar{
+        width: 100%;
+    }
+}

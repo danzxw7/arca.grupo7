@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f3f3f3;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* CONTAINER */
+
+.container{
+    width: 100%;
+    max-width: 600px;
+
+    text-align: center;
+}
+
+/* TÍTULO */
+
+h1{
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+
+    margin-bottom: 25px;
+
+    color: #1f2a44;
+}
+
+/* FOTO */
+
+.foto-perfil{
+    width: clamp(120px, 25vw, 160px);
+    height: clamp(120px, 25vw, 160px);
+
+    border-radius: 50%;
+
+    background-color: #cfcfcf;
+
+    margin: 0 auto 30px;
+
+    border: 2px solid #7c7c7c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: clamp(30px, 5vw, 40px);
+}
+
+/* FORM */
+
+form{
+    width: 100%;
+    max-width: 320px;
+
+    margin: auto;
+}
+
+.campo{
+    margin-bottom: 18px;
+
+    text-align: left;
+}
+
+label{
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+input{
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #777;
+    border-radius: 4px;
+
+    font-size: 16px;
+}
+
+/* BOTÕES */
+
+.botoes{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+#voltar{
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 26px;
+
+    cursor: pointer;
+}
+
+.sair{
+    background-color: #2f6fe4;
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 10px 22px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.sair:hover{
+    background-color: #1d56bb;
+}
+
+/* TABLET */
+
+@media(max-width: 768px){
+
+    .container{
+        max-width: 500px;
+    }
+
+    form{
+        max-width: 100%;
+    }
+}
+
+/* CELULAR */
+
+@media(max-width: 480px){
+
+    body{
+        padding: 15px;
+    }
+
+    h1{
+        margin-bottom: 20px;
+    }
+
+    .foto-perfil{
+        margin-bottom: 25px;
+    }
+
+    .botoes{
+        justify-content: space-between;
+    }
+
+    .sair{
+        width: 120px;
+    }
+}
