@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+    margin: 0;
 }
 
 /* SIDEBAR */
@@ -21,11 +21,11 @@ body {
 }
 
 /* Botão hamburguer */
-.menu-btn {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 1000;
+.menu-btn{
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:1000;
 }
 
 /* CONTEÚDO */
