@@ -1,3 +1,5 @@
+// script geral para o menu lateral
+
 function toggleMenu(){
 
     const sidebar = document.getElementById("sidebar");

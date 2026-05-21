@@ -1,3 +1,5 @@
+/* // css geral para o menu lateral e separação do conteúdo(colunas) */
+
 body {
     margin: 0;
 }
@@ -104,4 +106,21 @@ body {
     background:#ece7f5;
 
     color:#4b2c72 !important;
+}
+
+/* RODAPÉ */
+footer{
+    width: 100%;
+
+    background-color: #1f2a44;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 50px;
+
+    font-size: 15px;
 }
