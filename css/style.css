@@ -1,69 +1,102 @@
 /* // css geral para o menu lateral e separação do conteúdo(colunas) */
 
-body {
-    margin: 0;
+html,
+body{
+    height:100%;
+    margin:0;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* MAIN */
+
+main{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
 }
 
 /* SIDEBAR */
+
 .sidebar{
+
     width:250px;
     height:100vh;
+
     background:#f8f8f8;
+
     padding-top:80px;
+
     position:fixed;
+
     top:0;
     left:-250px;
 
     transition:0.3s ease;
+
+    z-index:999;
 }
 
 /* MENU ABERTO */
+
 .sidebar.active{
     left:0;
 }
 
-/* Botão hamburguer */
+/* BOTÃO HAMBURGUER */
+
 .menu-btn{
-    position: fixed;
 
-    top: 15px;
-    left: 15px;
+    position:fixed;
 
-    width: 50px;
-    height: 50px;
+    top:15px;
+    left:15px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width:50px;
+    height:50px;
 
-    background: #1f242d !important;
-    color: white !important;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    border: none;
-    border-radius: 10px;
+    background:#1f242d !important;
+    color:white !important;
 
-    font-size: 24px;
+    border:none;
+    border-radius:10px;
 
-    cursor: pointer;
+    font-size:24px;
 
-    z-index: 1000;
+    cursor:pointer;
 
-    transition: 0.3s ease;
+    z-index:1000;
+
+    transition:0.3s ease;
 }
 
 .menu-btn:hover{
-    background: #2d343f !important;
 
-    transform: scale(1.05);
+    background:#2d343f !important;
+
+    transform:scale(1.05);
 }
 
 /* CONTEÚDO */
+
 .content{
+
+    flex:1;
+
     margin-left:0;
 
-    padding:40px 40px 40px 80px;
-
-    min-height:100vh;
+    padding:0px 80px 40px 80px;
 
     background:#f5f5f5;
 
@@ -71,11 +104,15 @@ body {
 }
 
 /* QUANDO MENU FECHAR */
+
 .content.full{
     margin-left:0;
 }
 
+/* LINKS MENU */
+
 .nav-link{
+
     color:#333 !important;
 
     font-size:16px;
@@ -93,7 +130,9 @@ body {
 }
 
 /* HOVER */
+
 .nav-link:hover{
+
     background:#ece7f5;
 
     color:#4b2c72 !important;
@@ -102,25 +141,43 @@ body {
 }
 
 /* LINK ATIVO */
+
 .nav-link.active{
+
     background:#ece7f5;
 
     color:#4b2c72 !important;
 }
 
-/* RODAPÉ */
+/* FOOTER */
+
 footer{
-    width: 100%;
 
-    background-color: #1f2a44;
+    width:100%;
 
-    color: white;
+    background-color:#1f2a44;
 
-    text-align: center;
+    color:white;
 
-    padding: 20px;
+    text-align:center;
 
-    margin-top: 50px;
+    padding:20px;
 
-    font-size: 15px;
+    font-size:15px;
+
+    margin-top:auto;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .content{
+        padding:30px 20px 30px 70px;
+    }
+
+    .sidebar{
+        width:220px;
+    }
+
 }

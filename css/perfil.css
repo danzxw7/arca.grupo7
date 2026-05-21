@@ -8,13 +8,6 @@
 body{
     background-color: #f3f3f3;
 
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px;
 }
 
 /* CONTAINER */
@@ -22,7 +15,7 @@ body{
 .container{
     width: 100%;
     max-width: 600px;
-
+     
     text-align: center;
 }
 
