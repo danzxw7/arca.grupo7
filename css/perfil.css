@@ -96,18 +96,6 @@ input{
     margin-top: 22px;
 }
 
-#voltar{
-    width: 40px;
-    height: 40px;
-
-    border: none;
-    background: transparent;
-
-    font-size: 26px;
-
-    cursor: pointer;
-}
-
 .sair{
     background-color: #2f6fe4;
     color: white;
