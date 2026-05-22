@@ -7,7 +7,3 @@ form.addEventListener("submit", function(event){
 
     alert("Até logo, " + nome + "!");
 });
-
-document.getElementById("voltar").addEventListener("click", function(){
-    alert("Voltando...");
-});
