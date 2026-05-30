@@ -1,125 +1,293 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
+
+:root{
+
+    /* Brand */
+
+    --primary: #F8F6F0;
+    --secondary: #84E0D7;
+
+    /* States */
+
+    --info: #7BB3FF;
+    --success: #4AC980;
+    --warning: #EEC662;
+    --error: #DB5151;
+
+    /* Neutral */
+
+    --black-1: #000000;
+    --black-2: #1D1D1D;
+    --black-3: #282828;
+
+    --gray-1: #333333;
+    --gray-2: #4F4F4F;
+    --gray-3: #828282;
+    --gray-4: #BDBDBD;
+    --gray-5: #E0E0E0;
+
+    --white: #FFFFFF;
+
+    /* Tokens */
+
+    --radius: 8px;
+
+    --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+    --shadow-md: 0 8px 24px rgba(0,0,0,.12);
+
+    --transition: .3s ease;
 }
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
 
 body{
-    background-color: #f2f2f2;
-    color: #222;
+
+    background:var(--primary);
+
+    color:var(--gray-1);
+
+    font-family:'Inter', sans-serif;
 }
+
+/* CONTAINER */
 
 .contato{
-    width: 100%;
-    min-height: 100vh;
-    padding: 30px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width:100%;
+
+    min-height:100vh;
+
+    padding:72px 24px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
+
+/* TÍTULO */
 
 h1{
-    font-size: 60px;
-    color: #1f2a44;
-    margin-bottom: 40px;
+
+    font-family:'Nunito', sans-serif;
+
+    font-size:48px;
+    line-height:52.8px;
+
+    font-weight:700;
+
+    color:var(--gray-1);
+
+    text-align:center;
+
+    margin-bottom:56px;
 }
 
-/* CAIXA */
+/* CAIXA DE CONTATO */
 
 .caixa-contato{
-    width: 380px;
-    border: 2px solid #999;
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 50px;
+
+    width:100%;
+    max-width:420px;
+
+    background:var(--white);
+
+    border:1px solid var(--gray-5);
+
+    border-radius:var(--radius);
+
+    padding:32px;
+
+    margin-bottom:56px;
+
+    box-shadow:var(--shadow-sm);
 }
 
+/* ITENS */
+
 .item{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 22px;
+
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:24px;
+
+    font-size:16px;
+    line-height:22.4px;
+
+    color:var(--gray-1);
 }
 
 .item:last-child{
-    margin-bottom: 0;
+    margin-bottom:0;
 }
 
 .item i{
-    color: #1f2a44;
+
+    color:var(--secondary);
+
+    font-size:20px;
 }
 
 /* TEXTO */
 
 .mensagem{
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 30px;
-    max-width: 700px;
-    line-height: 1.6;
+
+    max-width:720px;
+
+    margin-bottom:32px;
+
+    text-align:center;
+
+    font-size:18px;
+    line-height:25.2px;
+
+    color:var(--gray-2);
 }
 
 /* BOTÃO */
 
 #doar{
-    background-color: #2f6fe4;
-    color: white;
-    border: none;
-    padding: 15px 50px;
-    font-size: 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-bottom: 25px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    background:var(--secondary);
+
+    color:var(--white);
+
+    font-family:'Inter', sans-serif;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    margin-bottom:32px;
 }
 
 #doar:hover{
-    background-color: #1d56bb;
+
+    background:#6fd3c8;
+
+    transform:translateY(-2px);
+}
+
+#doar:active{
+
+    transform:scale(.98);
 }
 
 /* PIX */
 
 .pix{
-    font-size: 20px;
-    margin-bottom: 35px;
+
+    font-size:16px;
+    line-height:22.4px;
+
+    color:var(--gray-2);
+
+    margin-bottom:40px;
+
+    text-align:center;
 }
 
 /* QR CODE */
 
+.qrcode{
+
+    background:var(--white);
+
+    border:1px solid var(--gray-5);
+
+    border-radius:var(--radius);
+
+    padding:16px;
+
+    box-shadow:var(--shadow-sm);
+}
+
 .qrcode img{
-    width: 140px;
-    height: 140px;
-    border: 2px solid #888;
-    padding: 5px;
-    background-color: white;
+
+    width:160px;
+    height:160px;
+
+    display:block;
 }
 
 /* RESPONSIVO */
 
-@media(max-width: 700px){
+@media(max-width:768px){
+
+    .contato{
+
+        padding:56px 24px;
+    }
 
     h1{
-        font-size: 42px;
-        text-align: center;
+
+        font-size:40px;
+        line-height:44px;
+
+        margin-bottom:40px;
     }
 
     .caixa-contato{
-        width: 100%;
+
+        padding:24px;
+
+        margin-bottom:40px;
+    }
+}
+
+@media(max-width:480px){
+
+    h1{
+
+        font-size:32px;
+        line-height:35.2px;
     }
 
     .item{
-        font-size: 18px;
+
+        font-size:14px;
+        line-height:19.6px;
     }
 
-    .mensagem,
+    .mensagem{
+
+        font-size:16px;
+        line-height:22.4px;
+    }
+
     .pix{
-        font-size: 17px;
+
+        font-size:14px;
+        line-height:19.6px;
     }
 
     #doar{
-        width: 100%;
+
+        width:100%;
+    }
+
+    .qrcode img{
+
+        width:140px;
+        height:140px;
     }
 }

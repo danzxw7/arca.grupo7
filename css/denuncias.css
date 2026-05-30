@@ -1,147 +1,394 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
+
+:root{
+
+    /* Brand */
+
+    --primary: #F8F6F0;
+    --secondary: #84E0D7;
+
+    /* States */
+
+    --info: #7BB3FF;
+    --success: #4AC980;
+    --warning: #EEC662;
+    --error: #DB5151;
+
+    /* Neutral */
+
+    --black-1: #000000;
+    --black-2: #1D1D1D;
+    --black-3: #282828;
+
+    --gray-1: #333333;
+    --gray-2: #4F4F4F;
+    --gray-3: #828282;
+    --gray-4: #BDBDBD;
+    --gray-5: #E0E0E0;
+
+    --white: #FFFFFF;
+
+    /* Tokens */
+
+    --radius: 8px;
+
+    --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+    --shadow-md: 0 8px 24px rgba(0,0,0,.12);
+
+    --transition: .3s ease;
 }
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
 
 body{
-    background-color: #f2f2f2;
-    color: #222;
+
+    background:var(--primary);
+
+    color:var(--gray-1);
+
+    font-family:'Inter', sans-serif;
 }
+
+/* CONTAINER */
 
 .denuncias{
-    max-width: 1100px;
-    margin: auto;
+
+    max-width:1024px;
+
+    margin:72px auto;
+
+    padding:0 24px;
 }
+
+/* TÍTULO */
 
 h1{
-    text-align: center;
-    font-size: 60px;
-    color: #1f2a44;
-    margin-bottom: 40px;
+
+    font-family:'Nunito', sans-serif;
+
+    font-size:48px;
+    line-height:52.8px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    color:var(--gray-1);
+
+    margin-bottom:56px;
 }
 
+/* LAYOUT */
+
 .conteudo{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:32px;
 }
 
 /* FORMULÁRIO */
 
 .formulario{
-    width: 50%;
+
+    width:50%;
+
+    background:var(--white);
+
+    padding:32px;
+
+    border:1px solid var(--gray-5);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow-sm);
 }
 
+/* CAMPOS */
+
 .campo{
-    margin-bottom: 25px;
+
+    margin-bottom:24px;
 }
 
 .titulo{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 6px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:8px;
 }
 
 .titulo span{
-    font-style: italic;
-    color: #444;
+
+    font-size:14px;
+
+    line-height:19.6px;
+
+    color:var(--gray-3);
+
+    font-style:italic;
 }
 
 label{
-    font-size: 20px;
+
+    font-size:16px;
+
+    line-height:22.4px;
+
+    font-weight:600;
+
+    color:var(--gray-1);
 }
+
+/* INPUTS */
 
 input,
 textarea{
-    width: 100%;
-    border: 1px solid #888;
-    padding: 10px;
-    font-size: 16px;
-    background-color: white;
+
+    width:100%;
+
+    border:1px solid var(--gray-5);
+
+    border-radius:var(--radius);
+
+    padding:16px;
+
+    background:var(--white);
+
+    color:var(--gray-1);
+
+    font-family:'Inter', sans-serif;
+
+    font-size:16px;
+
+    line-height:22.4px;
+
+    outline:none;
+
+    transition:var(--transition);
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:var(--gray-3);
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:var(--info);
+
+    box-shadow:0 0 0 4px rgba(123,179,255,.15);
 }
 
 textarea{
-    height: 140px;
-    resize: none;
+
+    min-height:140px;
+
+    resize:vertical;
 }
 
 /* UPLOAD */
 
 .upload-area{
-    width: 40%;
+
+    width:50%;
 }
 
 .upload-box{
-    width: 100%;
-    height: 300px;
-    border: 2px solid #888;
-    background-color: #fafafa;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width:100%;
 
-    padding: 20px;
-    text-align: center;
+    min-height:420px;
+
+    background:var(--white);
+
+    border:2px dashed var(--gray-4);
+
+    border-radius:var(--radius);
+
+    padding:32px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
 }
 
+.upload-box:hover{
+
+    border-color:var(--secondary);
+}
+
+/* BOTÃO UPLOAD */
+
 #btnUpload{
-    background-color: #2f6fe4;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 15px;
+
+    padding:16px 32px;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    background:var(--secondary);
+
+    color:var(--white);
+
+    font-family:'Inter', sans-serif;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    margin-bottom:24px;
 }
 
 #btnUpload:hover{
-    background-color: #1d56bb;
+
+    background:#6fd3c8;
+
+    transform:translateY(-2px);
+}
+
+#btnUpload:active{
+
+    transform:scale(.98);
 }
 
 #textoArquivo{
-    color: #444;
-    font-size: 15px;
+
+    font-size:14px;
+
+    line-height:19.6px;
+
+    color:var(--gray-3);
 }
 
-/* BOTÃO */
+/* BOTÃO ENVIAR */
 
 .btn-enviar{
-    width: 100%;
-    margin-top: 25px;
-    padding: 14px;
-    border: none;
-    background-color: #2f6fe4;
-    color: white;
-    font-size: 18px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
+
+    width:100%;
+
+    margin-top:32px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    background:var(--secondary);
+
+    color:var(--white);
+
+    font-family:'Inter', sans-serif;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
 }
 
 .btn-enviar:hover{
-    background-color: #1d56bb;
+
+    background:#6fd3c8;
+
+    transform:translateY(-2px);
+}
+
+.btn-enviar:active{
+
+    transform:scale(.98);
 }
 
 /* RESPONSIVO */
 
-@media(max-width: 900px){
-
-    h1{
-        font-size: 45px;
-    }
+@media(max-width:900px){
 
     .conteudo{
-        flex-direction: column;
+
+        flex-direction:column;
+
+        gap:32px;
     }
 
     .formulario,
     .upload-area{
-        width: 100%;
+
+        width:100%;
+    }
+
+    h1{
+
+        font-size:40px;
+        line-height:44px;
+
+        margin-bottom:40px;
+    }
+}
+
+@media(max-width:480px){
+
+    .denuncias{
+
+        margin:56px auto;
+
+        padding:0 24px;
+    }
+
+    h1{
+
+        font-size:32px;
+        line-height:35.2px;
+    }
+
+    .formulario{
+
+        padding:24px;
+    }
+
+    .upload-box{
+
+        min-height:320px;
+
+        padding:24px;
+    }
+
+    .titulo{
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:4px;
     }
 }

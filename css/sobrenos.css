@@ -1,107 +1,264 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
+
+:root{
+
+    /* Brand */
+
+    --primary: #F8F6F0;
+    --secondary: #84E0D7;
+
+    /* States */
+
+    --info: #7BB3FF;
+    --success: #4AC980;
+    --warning: #EEC662;
+    --error: #DB5151;
+
+    /* Neutral */
+
+    --black-1: #000000;
+    --black-2: #1D1D1D;
+    --black-3: #282828;
+
+    --gray-1: #333333;
+    --gray-2: #4F4F4F;
+    --gray-3: #828282;
+    --gray-4: #BDBDBD;
+    --gray-5: #E0E0E0;
+
+    --white: #FFFFFF;
+
+    /* Tokens */
+
+    --radius: 8px;
+
+    --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+    --shadow-md: 0 8px 24px rgba(0,0,0,.12);
+
+    --transition: .3s ease;
 }
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
 
 body{
-    background-color: #f2f2f2;
-    color: #222;
+
+    background:var(--primary);
+
+    color:var(--gray-1);
+
+    font-family:'Inter', sans-serif;
 }
+
+/* SECTION */
 
 .sobre{
-    width: 100%;
-    min-height: 100vh;
-    padding: 40px 8%;
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:72px 8%;
 }
+
+/* TÍTULO */
 
 h1{
-    text-align: center;
-    font-size: 60px;
-    color: #1f2a44;
-    margin-bottom: 40px;
+
+    font-family:'Nunito', sans-serif;
+
+    font-size:48px;
+    line-height:52.8px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    color:var(--gray-1);
+
+    margin-bottom:56px;
 }
 
+/* CONTEÚDO */
+
 .conteudo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:48px;
 }
 
 /* TEXTO */
 
 .texto{
-    width: 60%;
+
+    width:60%;
 }
 
 .texto h2{
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #111;
+
+    font-family:'Nunito', sans-serif;
+
+    font-size:32px;
+    line-height:35.2px;
+
+    font-weight:700;
+
+    color:var(--gray-1);
+
+    margin-bottom:16px;
 }
 
 .texto p{
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    text-align: justify;
+
+    font-size:16px;
+    line-height:22.4px;
+
+    color:var(--gray-2);
+
+    margin-bottom:24px;
+
+    text-align:justify;
 }
 
 .texto ul{
-    margin-left: 20px;
+
+    margin-left:24px;
 }
 
 .texto li{
-    font-size: 17px;
-    margin-bottom: 18px;
-    line-height: 1.6;
+
+    font-size:16px;
+    line-height:22.4px;
+
+    color:var(--gray-2);
+
+    margin-bottom:16px;
 }
 
 .texto strong{
-    color: #1f2a44;
+
+    color:var(--gray-1);
+
+    font-weight:700;
 }
 
 /* IMAGEM */
 
 .imagem{
-    width: 40%;
-    display: flex;
-    justify-content: center;
+
+    width:40%;
+
+    display:flex;
+
+    justify-content:center;
 }
 
 .imagem img{
-    width: 100%;
-    max-width: 400px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 3px solid #999;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+
+    width:100%;
+
+    max-width:420px;
+
+    height:520px;
+
+    object-fit:cover;
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--gray-5);
+
+    box-shadow:var(--shadow-md);
+
+    transition:var(--transition);
+}
+
+.imagem img:hover{
+
+    transform:translateY(-4px);
 }
 
 /* RESPONSIVO */
 
-@media(max-width: 900px){
+@media(max-width:900px){
+
+    .sobre{
+
+        padding:56px 24px;
+    }
 
     h1{
-        font-size: 45px;
+
+        font-size:40px;
+        line-height:44px;
+
+        margin-bottom:40px;
     }
 
     .conteudo{
-        flex-direction: column;
+
+        flex-direction:column;
+
+        gap:40px;
     }
 
     .texto{
-        width: 100%;
+
+        width:100%;
     }
 
     .imagem{
-        width: 100%;
+
+        width:100%;
     }
 
     .imagem img{
-        height: 400px;
+
+        max-width:500px;
+
+        height:400px;
+    }
+}
+
+@media(max-width:480px){
+
+    .sobre{
+
+        padding:40px 20px;
+    }
+
+    h1{
+
+        font-size:32px;
+        line-height:35.2px;
+    }
+
+    .texto h2{
+
+        font-size:24px;
+        line-height:26.4px;
+    }
+
+    .texto p,
+    .texto li{
+
+        font-size:14px;
+        line-height:19.6px;
+    }
+
+    .imagem img{
+
+        height:320px;
     }
 }

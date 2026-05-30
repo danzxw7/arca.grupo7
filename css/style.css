@@ -1,18 +1,67 @@
 /* // css geral para o menu lateral e separação do conteúdo(colunas) */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
+
+:root{
+
+    /* Brand */
+
+    --primary: #F8F6F0;
+    --secondary: #84E0D7;
+
+    /* State */
+
+    --info: #7BB3FF;
+    --success: #4AC980;
+    --warning: #EEC662;
+    --error: #DB5151;
+
+    /* Neutral */
+
+    --black-1: #000000;
+    --black-2: #1D1D1D;
+    --black-3: #282828;
+
+    --gray-1: #333333;
+    --gray-2: #4F4F4F;
+    --gray-3: #828282;
+    --gray-4: #BDBDBD;
+    --gray-5: #E0E0E0;
+
+    --white: #FFFFFF;
+
+    /* Design Tokens */
+
+    --radius: 8px;
+
+    --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+    --shadow-md: 0 8px 24px rgba(0,0,0,.12);
+
+    --transition: .3s ease;
+}
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 html,
 body{
     height:100%;
-    margin:0;
 }
 
 body{
     display:flex;
     flex-direction:column;
 
-    font-family:Arial, Helvetica, sans-serif;
-}
+    font-family:'Inter', sans-serif;
 
+    background:var(--primary);
+    color:var(--gray-1);
+}
 
 /* MAIN */
 
@@ -30,62 +79,72 @@ main{
     width:250px;
     height:100vh;
 
-    background:#f8f8f8;
-
-    padding-top:80px;
-
     position:fixed;
 
     top:0;
     left:-250px;
 
-    transition:0.3s ease;
-
     z-index:999;
-}
 
-/* MENU ABERTO */
+    padding-top:80px;
+
+    background:var(--white);
+
+    border-right:1px solid var(--gray-5);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+}
 
 .sidebar.active{
     left:0;
 }
 
-/* BOTÃO HAMBURGUER */
+/* BOTÃO MENU */
 
 .menu-btn{
 
     position:fixed;
 
-    top:15px;
-    left:15px;
+    top:16px;
+    left:16px;
 
-    width:50px;
-    height:50px;
+    width:48px;
+    height:48px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    background:#1f242d !important;
-    color:white !important;
+    background:var(--secondary) !important;
+
+    color:var(--white) !important;
 
     border:none;
-    border-radius:10px;
 
-    font-size:24px;
+    border-radius:var(--radius);
+
+    font-size:20px;
 
     cursor:pointer;
 
     z-index:1000;
 
-    transition:0.3s ease;
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
 }
 
 .menu-btn:hover{
 
-    background:#2d343f !important;
+    background:#6fd3c8 !important;
 
-    transform:scale(1.05);
+    transform:translateY(-2px);
+}
+
+.menu-btn:active{
+    transform:scale(.97);
 }
 
 /* CONTEÚDO */
@@ -96,57 +155,59 @@ main{
 
     margin-left:0;
 
-    padding:0px 80px 40px 80px;
+    padding:80px;
 
-    background:#f5f5f5;
+    background:var(--primary);
 
-    transition:0.3s ease;
+    transition:var(--transition);
 }
-
-/* QUANDO MENU FECHAR */
 
 .content.full{
     margin-left:0;
 }
 
-/* LINKS MENU */
+/* LINKS */
 
 .nav-link{
 
-    color:#333 !important;
+    display:block;
+
+    color:var(--gray-1) !important;
 
     font-size:16px;
     font-weight:500;
 
-    padding:12px 20px !important;
-
-    border-radius:10px;
-
-    margin:4px 10px;
-
-    transition:0.3s ease;
-
     text-decoration:none;
+
+    padding:16px 24px !important;
+
+    margin:8px 16px;
+
+    border-radius:var(--radius);
+
+    transition:var(--transition);
 }
 
 /* HOVER */
 
 .nav-link:hover{
 
-    background:#ece7f5;
+    background:rgba(132,224,215,.15);
 
-    color:#4b2c72 !important;
+    color:var(--secondary) !important;
 
-    transform:translateX(3px);
+    transform:translateX(4px);
 }
 
-/* LINK ATIVO */
+/* ATIVO */
 
 .nav-link.active{
 
-    background:#ece7f5;
+    background:rgba(132,224,215,.15);
 
-    color:#4b2c72 !important;
+    color:var(--secondary) !important;
+
+    font-weight:600;
 }
 
 /* FOOTER */
@@ -155,17 +216,21 @@ footer{
 
     width:100%;
 
-    background-color:#1f2a44;
+    background:var(--black-2);
 
-    color:white;
+    color:var(--white);
 
     text-align:center;
 
-    padding:20px;
+    padding:24px;
 
-    font-size:15px;
+    font-size:16px;
 
-    margin-top:auto;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer p{
+    color:var(--gray-4);
 }
 
 /* RESPONSIVO */
@@ -173,11 +238,17 @@ footer{
 @media(max-width:768px){
 
     .content{
-        padding:60px 20px 30px 20px;
+        padding:72px 24px 32px;
     }
 
     .sidebar{
         width:220px;
+        left:-220px;
+    }
+
+    .menu-btn{
+        top:16px;
+        left:16px;
     }
 
 }

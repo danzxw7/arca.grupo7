@@ -1,64 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
+
+:root{
+
+    /* Brand */
+
+    --primary: #F8F6F0;
+    --secondary: #84E0D7;
+
+    /* States */
+
+    --info: #7BB3FF;
+    --success: #4AC980;
+    --warning: #EEC662;
+    --error: #DB5151;
+
+    /* Neutral */
+
+    --black-1: #000000;
+    --black-2: #1D1D1D;
+    --black-3: #282828;
+
+    --gray-1: #333333;
+    --gray-2: #4F4F4F;
+    --gray-3: #828282;
+    --gray-4: #BDBDBD;
+    --gray-5: #E0E0E0;
+
+    --white: #FFFFFF;
+
+    /* Tokens */
+
+    --radius: 8px;
+
+    --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+
+    --transition: .3s ease;
+}
+
+/* RESET */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* BODY */
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f2f2f2;
+
+    background:var(--primary);
+
+    font-family:'Inter', sans-serif;
+
+    color:var(--gray-1);
 }
 
+/* CONTAINER */
+
 .container{
+
     width:90%;
-    max-width:900px;
+    max-width:1024px;
 
     margin:40px auto;
 
-    background:white;
+    background:var(--white);
 
     padding:40px;
 
-    border-radius:10px;
+    border:1px solid var(--gray-5);
 
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow-sm);
 }
 
 /* TOPO */
 
 .topo{
+
     margin-bottom:40px;
 }
 
 .topo h1{
-    font-size:40px;
-    margin-bottom:10px;
-    color:#222;
+
+    font-family:'Nunito', sans-serif;
+
+    font-size:48px;
+    line-height:52.8px;
+
+    font-weight:700;
+
+    color:var(--gray-1);
+
+    margin-bottom:8px;
 }
 
 .topo h2{
-    font-size:22px;
-    color:#555;
+
+    font-family:'Inter', sans-serif;
+
+    font-size:18px;
+    line-height:25.2px;
+
+    font-weight:400;
+
+    color:var(--gray-3);
 }
 
 /* FORM */
 
 #form-adocao{
+
     display:flex;
     flex-direction:column;
-    gap:25px;
+
+    gap:24px;
 }
 
 .grupo-input{
+
     display:flex;
     flex-direction:column;
 }
 
+/* LABELS */
+
 .grupo-input label{
+
     margin-bottom:8px;
-    font-weight:bold;
-    color:#333;
+
+    font-size:14px;
+    line-height:19.6px;
+
+    font-weight:600;
+
+    color:var(--gray-1);
 }
+
+/* INPUTS */
 
 .grupo-input input,
 .grupo-input select,
@@ -66,61 +147,141 @@ body{
 
     width:100%;
 
-    padding:15px;
+    padding:16px;
 
-    border:1px solid #ccc;
-    border-radius:8px;
+    border:1px solid var(--gray-5);
+
+    border-radius:var(--radius);
+
+    background:var(--white);
+
+    color:var(--gray-1);
+
+    font-family:'Inter', sans-serif;
 
     font-size:16px;
+    line-height:22.4px;
 
     outline:none;
+
+    transition:var(--transition);
 }
 
+.grupo-input input::placeholder,
+.grupo-input textarea::placeholder{
+
+    color:var(--gray-3);
+}
+
+/* FOCUS */
+
+.grupo-input input:focus,
+.grupo-input select:focus,
+.grupo-input textarea:focus{
+
+    border-color:var(--info);
+
+    box-shadow:0 0 0 4px rgba(123,179,255,.15);
+}
+
+/* TEXTAREA */
+
 .grupo-input textarea{
-    height:150px;
-    resize:none;
+
+    min-height:150px;
+
+    resize:vertical;
 }
 
 /* BOTÃO */
 
 .area-botao{
+
     display:flex;
+
     justify-content:flex-end;
+
+    margin-top:8px;
 }
 
 .btn-adotar{
 
-    padding:15px 35px;
+    padding:16px 32px;
 
     border:none;
-    border-radius:8px;
 
-    background:#1e73e8;
-    color:white;
+    border-radius:var(--radius);
 
-    font-size:18px;
-    font-weight:bold;
+    background:var(--secondary);
+
+    color:var(--white);
+
+    font-family:'Inter', sans-serif;
+
+    font-size:16px;
+    font-weight:600;
 
     cursor:pointer;
 
-    transition:0.3s;
+    transition:var(--transition);
 }
 
 .btn-adotar:hover{
-    background:#1259bb;
+
+    background:#6fd3c8;
+
+    transform:translateY(-2px);
+}
+
+.btn-adotar:active{
+
+    transform:scale(.98);
 }
 
 /* RESPONSIVO */
 
-@media(max-width:700px){
+@media(max-width:768px){
 
     .container{
+
         width:95%;
-        padding:25px;
+
+        padding:32px 24px;
     }
 
     .topo h1{
-        font-size:30px;
+
+        font-size:40px;
+        line-height:44px;
+    }
+}
+
+@media(max-width:480px){
+
+    .container{
+
+        padding:24px 20px;
     }
 
+    .topo h1{
+
+        font-size:32px;
+        line-height:35.2px;
+    }
+
+    .topo h2{
+
+        font-size:16px;
+        line-height:22.4px;
+    }
+
+    .area-botao{
+
+        justify-content:stretch;
+    }
+
+    .btn-adotar{
+
+        width:100%;
+    }
 }
