@@ -158,38 +158,20 @@ h1{
 
 #doar{
 
-    padding:16px 40px;
+    display:block;
 
-    border:none;
+    font-family:'Nunito', sans-serif;
 
-    border-radius:var(--radius);
+    font-size:32px;
+    line-height:35.2px;
 
-    background:var(--secondary);
+    font-weight:700;
 
-    color:var(--white);
+    color:var(--gray-1);
 
-    font-family:'Inter', sans-serif;
+    text-align:center;
 
-    font-size:16px;
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:var(--transition);
-
-    margin-bottom:32px;
-}
-
-#doar:hover{
-
-    background:#6fd3c8;
-
-    transform:translateY(-2px);
-}
-
-#doar:active{
-
-    transform:scale(.98);
+    margin-bottom:24px;
 }
 
 /* PIX */
@@ -282,8 +264,9 @@ h1{
 
     #doar{
 
-        width:100%;
-    }
+    font-size:24px;
+    line-height:26.4px;
+}
 
     .qrcode img{
 
