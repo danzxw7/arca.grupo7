@@ -31,7 +31,80 @@
     --shadow-md: 0 8px 24px rgba(0,0,0,.12);
     --transition: .3s ease;
 }
+/* ========================================================================== */
+.card-conteudo-branco {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 1024px;         
+    margin: 0 auto 40px auto;  
+    padding: 48px;              
+    border-radius: 16px;        
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); 
+    border: 1px solid var(--gray-5);
+}
 
+/* Ajustes de espaçamento interno para os títulos do texto */
+.card-conteudo-branco h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    line-height: 35.2px;
+    font-weight: 700;
+    color: var(--gray-1);
+    margin-bottom: 16px;
+}
+
+/* Espaçamento do parágrafo */
+.card-conteudo-branco p {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray-2);
+    margin-bottom: 32px;
+    text-align: justify;
+}
+
+/* Configuração da lista interna */
+.card-conteudo-branco ul {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.card-conteudo-branco li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray-2);
+    margin-bottom: 16px;
+}
+
+/* Marcador ciano customizado */
+.card-conteudo-branco li::before {
+    content: "•";
+    color: var(--secondary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -20px;
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: 0;
+}
+
+.card-conteudo-branco strong {
+    color: var(--gray-1);
+    font-weight: 700;
+}
+
+@media(max-width: 768px) {
+    .card-conteudo-branco {
+        padding: 32px 24px;
+    }
+    
+    .card-conteudo-branco h2 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
 /* RESET */
 * {
     margin: 0;
