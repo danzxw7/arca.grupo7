@@ -203,36 +203,26 @@
 
 /* BOTÃO */
 
-.btn-confirmar{
-
-    width:260px;
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:var(--radius);
-
-    background:var(--secondary);
-
-    color:var(--white);
-
-    font-family:'Inter', sans-serif;
-
-    font-size:16px;
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:var(--transition);
+.btn-confirmar {
+    width: 260px;
+    padding: 16px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--secondary);
+    color: var(--gray-1); 
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700; 
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(132, 224, 215, 0.3); 
+}
+.btn-confirmar:hover {
+    filter: brightness(0.95); 
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(132, 224, 215, 0.4);
 }
 
-.btn-confirmar:hover{
-
-    background:#6fd3c8;
-
-    transform:translateY(-2px);
-}
 
 .btn-confirmar:active{
 
