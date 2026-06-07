@@ -92,6 +92,28 @@ body{
         border-bottom: 1px solid var(--gray-5);
     }
 
+.header-titulo-branco {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 1024px;      
+    margin: 0 auto 48px auto; 
+    padding: 48px;           
+    border-radius: 16px;     
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); 
+    border: 1px solid var(--gray-5); 
+    
+    text-align: center;
+}
+
+/* O TEXTO DENTRO DA CAIXA */
+.header-titulo-branco h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 48px;
+    line-height: 52.8px;
+    font-weight: 700;
+    color: var(--gray-1);
+    margin: 0;
+}
 /* GRID */
 
 .content{
