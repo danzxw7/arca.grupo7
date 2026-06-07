@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
 
-:root{
-
+:root {
     /* Brand */
 
     --primary: #F8F6F0;
@@ -35,55 +34,45 @@
     --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
 
     --transition: .3s ease;
+
 }
 
 /* RESET */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* BODY */
-
-body{
-
-    background:var(--primary);
-
-    font-family:'Inter', sans-serif;
-
-    color:var(--gray-1);
+body {
+    background: var(--primary);
+    font-family: 'Inter', sans-serif;
+    color: var(--gray-1);
 }
 
 /* CONTAINER */
-
-.container{
-
-    width:100%;
-    max-width:700px;
-
-    margin:0 auto;
-
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
     padding: 20px 24px;
-
-    text-align:center;
+    text-align: center;
 }
 
-/* TÍTULO */
-
-h1{
-
-    font-family:'Nunito', sans-serif;
-
-    font-size:48px;
-    line-height:52.8px;
-
-    font-weight:700;
-
-    color:var(--gray-1);
-
-    margin-bottom:40px;
+/* TÍTULO - MODIFICADO COM A LINHA SUAVE */
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 48px;
+    line-height: 52.8px;
+    font-weight: 700;
+    color: var(--gray-1);
+    width: 100%;                  /* Ocupa a largura total do grid */
+    
+    /* Trecho adicionado */
+    padding-bottom: 24px;         /* Espaço confortável entre o texto e a linha */
+    margin-bottom: 48px;          /* Afasta o título/linha do conteúdo abaixo */
+    border-bottom: 1px solid var(--gray-5); /* A linha divisória suave do projeto */
 }
 
 /* FOTO DE PERFIL */
