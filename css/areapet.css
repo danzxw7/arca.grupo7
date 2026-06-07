@@ -62,46 +62,39 @@
 
 /* TÍTULO */
 
-.registro-pet-container h1{
-
-    font-family:'Nunito', sans-serif;
-
-    font-size:48px;
-    line-height:52.8px;
-
-    font-weight:700;
-
-    color:var(--gray-1);
-
-    text-align:center;
-
-    margin-bottom:40px;
+.registro-pet-container h1 {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 48px;
+    line-height: 52.8px;
+    font-weight: 700;
+    color: var(--gray-1);
+    text-align: center;
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--gray-5);
 }
 
 /* FOTO */
 
-.foto-pet{
-
-    width:160px;
-    height:160px;
-
-    border-radius:50%;
-
-    background:var(--white);
-
-    border:2px solid var(--gray-5);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    margin-bottom:40px;
-
-    cursor:pointer;
-
-    box-shadow:var(--shadow-sm);
-
-    transition:var(--transition);
+.foto-pet {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--gray-4); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.foto-pet:hover {
+    transform: translateY(-2px); 
+    border-color: var(--secondary);
+    background: rgba(132, 224, 215, 0.03);
 }
 
 .foto-pet:hover{
