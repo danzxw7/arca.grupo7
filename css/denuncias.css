@@ -47,25 +47,36 @@ body {
 }
 
 /* CONTAINER */
-.denuncias {
-    max-width: 1024px;
-    margin: 60px auto; /* Ajustado para conversar com o alinhamento das outras páginas */
-    padding: 0 24px;
+.secao-titulo-container {
+    width: 100%;
+    max-width: 1024px;   
+    margin: 0 auto 40px auto; /* Centraliza na tela e afasta do conteúdo/formulário abaixo */
+    text-align: center;      /* Garante que o texto fique no centro */
+    padding: 0 24px;      
 }
 
-/* TÍTULO (Com a linha divisória integrada perfeitamente) */
-.container h1 {
+/* O TÍTULO PRINCIPAL COM A LINHA SUAVE */
+.secao-titulo-container h1 {
     font-family: 'Nunito', sans-serif;
     font-size: 48px;
     line-height: 52.8px;
     font-weight: 700;
-    text-align: center;
     color: var(--gray-1);
-    padding-bottom: 24px;
-    margin-bottom: 48px;
-    border-bottom: 1px solid var(--gray-5);
+    margin: 0;
+    padding-bottom: 24px;    
+    border-bottom: 1px solid var(--gray-5); /* A linha divisória suave */
+    display: inline-block;   
+    width: 100%;          
 }
 
+/* RESPONSIVIDADE PARA CELULAR */
+@media(max-width: 768px) {
+    .secao-titulo-container h1 {
+        font-size: 36px;
+        line-height: 40px;
+        padding-bottom: 16px;
+    }
+}
 /* LAYOUT (O que correspondia ao "passo 2") */
 .conteudo {
     display: flex;
