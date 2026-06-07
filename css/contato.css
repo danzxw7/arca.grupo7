@@ -73,21 +73,20 @@ body{
 }
 
 /* TÍTULO */
-
-h1{
-
-    font-family:'Nunito', sans-serif;
-
-    font-size:48px;
-    line-height:52.8px;
-
-    font-weight:700;
-
-    color:var(--gray-1);
-
-    text-align:center;
-
-    margin-bottom:56px;
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 48px;
+    line-height: 52.8px;
+    font-weight: 700;
+    color: var(--gray-1);
+    width: 100%;
+    max-width: 720px;             
+    text-align: center;
+    
+    padding-bottom: 24px;         
+    margin-top: 40px;             
+    margin-bottom: 48px;          
+    border-bottom: 1px solid var(--gray-5); 
 }
 
 /* CAIXA DE CONTATO */
@@ -137,78 +136,68 @@ h1{
 
     font-size:20px;
 }
-
-/* TEXTO */
-
-.mensagem{
-
-    max-width:720px;
-
-    margin-bottom:32px;
-
-    text-align:center;
-
-    font-size:18px;
-    line-height:25.2px;
-
-    color:var(--gray-2);
+/* TEXTO INFORMATIVO FORA DO CARD (Apoie a organização...) */
+.mensagem {
+    max-width: 720px;
+    margin-bottom: 40px;      /* Espaço confortável até o início do card */
+    text-align: center;
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--gray-2);
 }
 
-/* BOTÃO */
+/* ==========================================================================
+   LAYOUT UNIFICADO: CARD "DOE AGORA" (Engloba tudo)
+   ========================================================================== */
+.card-doacao {
+    width: 100%;
+    max-width: 500px;           /* Alinha perfeitamente com o bloco de contatos */
+    margin: 0 auto 40px auto;   /* Centraliza no meio da tela e afasta do rodapé */
+    background: var(--white);
+    border: 1px solid var(--gray-5);
+    border-radius: var(--radius);
+    padding: 40px 32px;         /* Espaçamento interno confortável para respirar os elementos */
+    box-shadow: var(--shadow-sm);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* Centraliza tudo horizontalmente dentro da caixa */
+    text-align: center;
+}
 
-#doar{
-
-    display:block;
-
-    font-family:'Nunito', sans-serif;
-
-    font-size:32px;
-    line-height:35.2px;
-
-    font-weight:700;
-
-    color:var(--gray-1);
-
-    text-align:center;
-
-    margin-bottom:24px;
+/* BOTÃO  */
+.card-doacao #doar {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    line-height: 35.2px;
+    font-weight: 700;
+    color: var(--gray-1);
+    margin-bottom: 12px;        /* Espaço curto até o texto do Pix */
 }
 
 /* PIX */
-
-.pix{
-
-    font-size:16px;
-    line-height:22.4px;
-
-    color:var(--gray-2);
-
-    margin-bottom:40px;
-
-    text-align:center;
+.card-doacao .pix {
+    font-size: 16px;
+    line-height: 22.4px;
+    color: var(--gray-2);
+    margin-bottom: 32px;        /* Espaço maior para empurrar o QR Code */
 }
 
-/* QR CODE */
-
-.qrcode{
-
-    background:var(--white);
-
-    border:1px solid var(--gray-5);
-
-    border-radius:var(--radius);
-
-    padding:16px;
-
-    box-shadow:var(--shadow-sm);
+/* QR CODE INTERNO */
+.card-doacao .qrcode {
+    background: var(--white);
+    border: 1px solid var(--gray-5);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); 
+    display: inline-block;
 }
 
-.qrcode img{
-
-    width:160px;
-    height:160px;
-
-    display:block;
+.card-doacao .qrcode img {
+    width: 160px;
+    height: 160px;
+    display: block;
 }
 
 /* RESPONSIVO */
