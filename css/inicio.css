@@ -54,6 +54,12 @@ body{
 
 .hero-text{
     flex: 1;
+
+    background: var(--white);
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+    border: 1px solid var(--gray-5);
 }
 
 .tag{
@@ -203,7 +209,7 @@ body{
     font-size: 16px;
     line-height: 22.4px;
 }
-
+    
 /* RESPONSIVO */
 
 @media(max-width:1100px){
@@ -213,6 +219,11 @@ body{
         text-align: center;
 
         padding: 80px 24px;
+    }
+
+    .hero-text {
+        padding: 32px 24px;
+        border-radius: 12px;
     }
 
     .hero-text h1{
