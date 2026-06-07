@@ -68,17 +68,18 @@ body {
     text-align: center;      
 }
 
-/* O TÍTULO PRINCIPAL COM A LINHA SUAVE DENTRO DA CAIXA */
-.secao-titulo-container h1 {
+.denuncias h1 {
     font-family: 'Nunito', sans-serif;
     font-size: 48px;
     line-height: 52.8px;
     font-weight: 700;
     color: var(--gray-1);
-    margin: 0;
-    padding-bottom: 24px;    
-    border-bottom: 1px solid var(--gray-5); 
-    width: 100%;          
+    text-align: center; 
+    width: 100%;
+    max-width: 1024px;
+    margin: 60px auto 48px auto; 
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-5); /* Linha divisória suave */
 }
 
 /* LAYOUT CONTEÚDO (Alinhado perfeitamente com a largura do título) */
