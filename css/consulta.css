@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
 /* Brand - ADICIONADO O SELETOR :ROOT PARA CORRIGIR O ERRO */
+
 :root {
     --primary: #F8F6F0;
-    --secondary: #84E0D7;
+    --secondary: #2A9D8F;
 
     /* States */
     --info: #7BB3FF;
