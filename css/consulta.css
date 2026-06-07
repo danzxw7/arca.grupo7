@@ -77,21 +77,20 @@ body{
 
 /* TÍTULO */
 
-.container h1{
+    .container h1{
 
-    font-family:'Nunito', sans-serif;
-
-    font-size:48px;
-    line-height:52.8px;
-
-    font-weight:700;
-
-    text-align:center;
-
-    margin-bottom:24px;
-
-    color:var(--gray-1);
-}
+        font-family: 'Nunito', sans-serif;
+        font-size: 48px;
+        line-height: 52.8px;
+        font-weight: 700;
+        text-align: center;
+        color: var(--gray-1);
+        
+        /* Trecho adicionado */
+        padding-bottom: 24px;
+        margin-bottom: 48px;
+        border-bottom: 1px solid var(--gray-5);
+    }
 
 /* GRID */
 
@@ -135,21 +134,28 @@ body{
     color:var(--gray-1);
 }
 
-.info ul{
-
-    padding-left:24px;
+.info ul {
+    list-style: none; 
 }
-
-.info li{
-
-    margin-bottom:28px;
-
-    color:var(--gray-2);
-
-    font-size:16px;
-    line-height:28px;
+.info li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 24px;
+    color: var(--gray-2);
+    font-size: 16px;
+    line-height: 26px;
 }
-
+.info li::before {
+    content: "•";
+    color: var(--secondary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -20px;
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: 0;
+}
 /* COLUNA DIREITA */
 
 .form-area{
@@ -291,7 +297,7 @@ button{
 
 button:hover{
 
-    background:#6fd3c8;
+    background:#6fd3c8; 
 
     transform:translateY(-2px);
 }

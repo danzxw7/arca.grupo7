@@ -57,6 +57,8 @@ a{
 .topo{
     text-align: center;
     margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--gray-5);
 }
 
 .topo h1{
