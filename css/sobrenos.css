@@ -2,18 +2,12 @@
 
 :root{
 
-/* Brand */
+
     --primary: #F8F6F0;
     --secondary: #2A9D8F;
-
-    /* States */
-    --info: #7BB3FF;
-    --success: #4AC980;
-    --warning: #EEC662;
-    --error: #DB5151;
-
-    /* Neutral */
+    
     --black-1: #000000;
+
     --black-2: #1D1D1D;
     --black-3: #282828;
 
@@ -24,254 +18,177 @@
     --gray-5: #E0E0E0;
 
     --white: #FFFFFF;
-
-    /* Tokens */
-    --radius: 8px;
-    --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
-    --shadow-md: 0 8px 24px rgba(0,0,0,.12);
-    --transition: .3s ease;
-}
-/* ========================================================================== */
-.card-conteudo-branco {
-    background-color: var(--white);
-    width: 100%;
-    max-width: 1024px;         
-    margin: 0 auto 40px auto;  
-    padding: 48px;              
-    border-radius: 16px;        
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); 
-    border: 1px solid var(--gray-5);
 }
 
-/* Ajustes de espaçamento interno para os títulos do texto */
-.card-conteudo-branco h2 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 32px;
-    line-height: 35.2px;
-    font-weight: 700;
-    color: var(--gray-1);
-    margin-bottom: 16px;
-}
-
-/* Espaçamento do parágrafo */
-.card-conteudo-branco p {
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--gray-2);
-    margin-bottom: 32px;
-    text-align: justify;
-}
-
-/* Configuração da lista interna */
-.card-conteudo-branco ul {
-    list-style: none;
-    margin-bottom: 8px;
-}
-
-.card-conteudo-branco li {
-    position: relative;
-    padding-left: 20px;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--gray-2);
-    margin-bottom: 16px;
-}
-
-/* Marcador ciano customizado */
-.card-conteudo-branco li::before {
-    content: "•";
-    color: var(--secondary);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -20px;
-    font-size: 20px;
-    vertical-align: middle;
-    line-height: 0;
-}
-
-.card-conteudo-branco strong {
-    color: var(--gray-1);
-    font-weight: 700;
-}
-
-@media(max-width: 768px) {
-    .card-conteudo-branco {
-        padding: 32px 24px;
-    }
-    
-    .card-conteudo-branco h2 {
-        font-size: 26px;
-        line-height: 30px;
-    }
-}
-/* RESET */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
-body {
+body{
+    font-family: 'Inter', sans-serif;
     background: var(--primary);
     color: var(--gray-1);
-    font-family: 'Inter', sans-serif;
-}
-
-/* SECTION */
-.sobre {
-    width: 100%;
-    max-width: 1024px; 
-    margin: 60px auto;
-    padding: 0 24px;
-}
-
-/* TÍTULO (Com a linha divisória padronizada) */
-h1 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 48px;
-    line-height: 52.8px;
-    font-weight: 700;
-    text-align: center;
-    color: var(--gray-1);
-    padding-bottom: 24px;
-    margin-bottom: 48px;
-    border-bottom: 1px solid var(--gray-5);
+    overflow-x: hidden;
 }
 
 /* CONTEÚDO */
-.conteudo {
+.content{
+    width: 100%;
+
+}
+
+/* HERO */
+.hero{
+    min-height: 70vh;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 48px;
+    gap: 72px;
+    padding: 72px 8%;
 }
 
-/* TEXTO */
-.texto {
-    width: 55%; 
+/* TEXTO CARD BRANCO */
+.hero-text{
+    flex: 1;
+    background: var(--white);
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+    border: 1px solid var(--gray-5);
 }
 
-.texto h2 {
+.tag{
+    background: rgba(132,224,215,0.15);
+    color: var(--secondary);
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+/* TÍTULO PRINCIPAL */
+.hero-text h1{
     font-family: 'Nunito', sans-serif;
-    font-size: 32px;
-    line-height: 35.2px;
+    font-size: 56px;
+    line-height: 61.6px;
+    color: var(--gray-1);
+
+    margin-bottom: 32px;
+
+}
+
+/* SUBTÍTULOS INTERNOS */
+.hero-text h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 28px;
+    line-height: 32px;
     font-weight: 700;
     color: var(--gray-1);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+    margin-top: 20px;
 }
 
-.texto p {
-    font-size: 16px;
-    line-height: 24px; 
-    color: var(--gray-2);
-    margin-bottom: 32px;
-    text-align: justify;
-}
-
-/* LISTA DE ITENS (Customizada com a bolinha ciana da marca) */
-.texto ul {
-    list-style: none; 
-    margin-bottom: 32px;
-}
-
-.texto li {
-    position: relative;
-    padding-left: 20px;
+/* PARÁGRAFOS */
+.hero-text p{
     font-size: 16px;
     line-height: 24px;
     color: var(--gray-2);
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+    max-width: 650px;
 }
 
-/* Marcador */
-.texto li::before {
-    content: "•";
-    color: var(--secondary);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -20px;
-    font-size: 20px;
-    vertical-align: middle;
-    line-height: 0;
-}
-
-.texto strong {
+.hero-text strong {
     color: var(--gray-1);
     font-weight: 700;
 }
 
-/* IMAGEM */
-.imagem {
-    width: 40%;
+/* IMAGEM RESPONSIVA */
+.hero-image{
+    flex: 1;
     display: flex;
     justify-content: center;
 }
 
-.imagem img {
+.hero-image img{
     width: 100%;
-    max-width: 420px;
-    height: auto; 
-    aspect-ratio: 4 / 5; 
+    max-width: 550px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
     object-fit: cover;
-    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
     border: 1px solid var(--gray-5);
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
 }
 
-.imagem img:hover {
-    transform: translateY(-2px); 
+/* SEÇÃO DE CARDS INFERIORES */
+.info-section{
+    padding: 15px 8% 96px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* RESPONSIVO */
-@media(max-width: 900px) {
-    .sobre {
-        margin: 40px auto;
-    }
+.info-card{
+    background: var(--white);
+    width: 280px;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid var(--gray-5);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all .3s ease;
+}
 
-    h1 {
-        font-size: 40px;
-        line-height: 44px;
-        margin-bottom: 40px;
-    }
+.info-card:hover{
+    transform: translateY(-4px);
+}
 
-    .conteudo {
+.info-card h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--secondary);
+}
+
+.info-card p{
+    color: var(--gray-2);
+    font-size: 15px;
+    line-height: 22px;
+}
+
+/* COMPORTAMENTO RESPONSIVO */
+@media(max-width:1100px){
+    .hero{
         flex-direction: column-reverse;
+        text-align: center;
+        padding: 80px 24px;
         gap: 40px;
     }
 
-    .texto,
-    .imagem {
-        width: 100%;
+    .hero-text {
+        padding: 32px 24px;
+        border-radius: 12px;
     }
 
-    .imagem img {
-        max-width: 500px;
-        aspect-ratio: 4 / 3; /* Foto fica horizontal no celular para não quebrar o rolar da página */
-    }
-}
-
-@media(max-width: 480px) {
-    .sobre {
-        padding: 0 20px;
+    .hero-text h1{
+        font-size: 40px;
+        line-height: 44px;
     }
 
-    h1 {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    .texto h2 {
+    .hero-text h2 {
         font-size: 24px;
-        line-height: 28px;
     }
 
-    .texto p,
-    .texto li {
-        font-size: 15px;
-        line-height: 22px;
+    .hero-text p{
+        margin: 0 auto 20px;
+    }
+
+    .hero-image img{
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
     }
 }
