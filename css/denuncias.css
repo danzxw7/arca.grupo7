@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
-
-:root{
-
-/* Brand */
+:root {
+    /* Brand */
     --primary: #F8F6F0;
     --secondary: #84E0D7;
 
@@ -46,14 +44,23 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-/* CONTAINER DO TÍTULO (Atualizado para o Layout de Caixa Branca do Início) */
+/* CONTAINER CENTRALIZADOR DO LAYOUT (Novo) */
+.main-layout {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente na tela */
+    align-items: center;     /* Centraliza horizontalmente na tela */
+    padding: 60px 24px;
+}
+
+/* CONTAINER DO TÍTULO (Ajustado para centralizar com precisão) */
 .secao-titulo-container {
     background-color: var(--white);
     width: 100%;
-    max-width: 1024px;       /* Mantém o alinhamento padrão do seu grid */
-    margin: 60px auto 48px auto; /* Centraliza na tela e afasta do conteúdo abaixo */
-    
-    /* Configuração da caixa branca flutuante idêntica à Hero do início */
+    max-width: 1024px;       
+    margin: 0 auto 48px auto; /* Centraliza horizontalmente e empurra o conteúdo */
     padding: 48px;           
     border-radius: 16px;     
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); 
@@ -69,20 +76,20 @@ body {
     font-weight: 700;
     color: var(--gray-1);
     margin: 0;
-    padding-bottom: 24px;    /* Espaço entre o texto e a linha */
-    border-bottom: 1px solid var(--gray-5); /* A linha divisória suave */
+    padding-bottom: 24px;    
+    border-bottom: 1px solid var(--gray-5); 
     width: 100%;          
 }
 
-/* LAYOUT CONTEÚDO */
+/* LAYOUT CONTEÚDO (Alinhado perfeitamente com a largura do título) */
 .conteudo {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
     gap: 48px; 
-    max-width: 1024px;       /* Alinha o grid do formulário com o do título */
+    width: 100%;
+    max-width: 1024px;       
     margin: 0 auto;
-    padding: 0 24px;
 }
 
 /* FORMULÁRIO */
@@ -237,8 +244,12 @@ textarea {
 
 /* RESPONSIVO */
 @media(max-width: 900px) {
+    .main-layout {
+        padding: 40px 16px;
+    }
+
     .secao-titulo-container {
-        margin: 40px auto 32px auto;
+        margin: 0 auto 32px auto;
         padding: 32px 24px;
         border-radius: 12px;
     }
@@ -252,7 +263,6 @@ textarea {
     .conteudo {
         flex-direction: column;
         gap: 32px;
-        padding: 0 16px;
     }
 
     .formulario,
