@@ -47,34 +47,28 @@ a{
 
 /* PÁGINA */
 
-.adocao{
+.header-titulo-branco {
+    background-color: var(--white);
     width: 100%;
-    padding: 60px 8%;
-}
-
-/* CABEÇALHO */
-
-.topo{
+    max-width: 1024px;       
+    margin: 0 auto 48px auto; 
+    
+    padding: 48px;           
+    border-radius: 16px;     
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); 
+    border: 1px solid var(--gray-5); 
+    
     text-align: center;
-    margin-bottom: 56px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid var(--gray-5);
 }
 
-.topo h1{
+/* O TEXTO DENTRO DA CAIXA */
+.header-titulo-branco h1 {
     font-family: 'Nunito', sans-serif;
     font-size: 48px;
     line-height: 52.8px;
+    font-weight: 700;
     color: var(--gray-1);
-    margin-bottom: 16px;
-}
-
-.topo p{
-    font-size: 18px;
-    line-height: 25.2px;
-    color: var(--gray-3);
-    max-width: 700px;
-    margin: auto;
+    margin: 0;
 }
 
 /* GRID */
