@@ -70,20 +70,16 @@ body{
 
 /* TÍTULO */
 
-h1{
-
-    font-family:'Nunito', sans-serif;
-
-    font-size:48px;
-    line-height:52.8px;
-
-    font-weight:700;
-
-    text-align:center;
-
-    color:var(--gray-1);
-
-    margin-bottom:56px;
+.container h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 48px;
+    line-height: 52.8px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--gray-1);
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--gray-5);
 }
 
 /* LAYOUT */
